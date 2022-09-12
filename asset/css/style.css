@@ -1,0 +1,91 @@
+:root{
+    --main: #F534FB;
+    --background:#3F3F3F;
+}
+*{
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: var(--background);
+}
+
+header{
+    padding: 2% 20%;
+    text-align: center;
+}
+header h1{
+    color: var(--main);
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+header p{
+    color:white;
+    font-size: 1em;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+}
+main section{
+    border: 2px dashed white;
+    margin: 1em;
+    padding: 0em 1em 1em 1em;;
+    transition: all 0.5s ease-in-out;
+}
+main section h2{
+    color: var(--main);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 0.3em;
+    font-size: 1.5em;
+    position: relative;
+    top: -20px;
+    background-color:var(--background);
+    transition: all 0.5s ease-in-out;
+}
+main section:hover>h2, main section:hover{
+    box-shadow: 0 0 10px var(--main);
+}
+main section p{
+    color: var(--main);
+    font-size: 1em;
+}
+main section pre{
+    background-image: linear-gradient(#A052A2 0%, var(--main) 100%);
+    color: white;
+    margin-top: 1em;
+    padding-left: 0.5em;
+    border-radius: 10px;
+}
+code{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 16px;
+    user-select: all;
+}
+code::selection{
+    background-color: aqua;
+    color: black;
+}
+
+
+footer{
+    padding: 5%;
+    text-align: center;
+    color: var(--main);
+}
+
+@media screen and (max-width: 992px) {
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+}
